@@ -2,6 +2,8 @@ package main_test
 
 import (
 	"testing"
+
+	main "github.com/matheuscaet/go-algorithms"
 )
 
 func TestBubbleSort(t *testing.T) {
@@ -11,4 +13,17 @@ func TestBubbleSort(t *testing.T) {
 	if !equal(sortedArr, expected) {
 		t.Errorf("BubbleSort failed: expected %v, got %v", expected, sortedArr)
 	}
+}
+
+// equal compares two slices of int for equality.
+func equal(a, b []int) bool {
+	if len(a) != len(b) {
+		return false
+	}
+	for i := range a {
+		if a[i] != b[i] {
+			return false
+		}
+	}
+	return true
 }

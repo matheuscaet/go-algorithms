@@ -10,7 +10,7 @@ A simple repository to try and apply algorithms using Go.
 ## Getting Started
 
 1. Clone the repository
-2. Explore the `algorithms/` directory for implementations
+2. Explore the `go-algorithms/` directory for implementations
 3. Run and test the algorithms
 
 ## Contributing
