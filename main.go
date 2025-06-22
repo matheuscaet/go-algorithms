@@ -13,6 +13,12 @@ func main() {
 	fmt.Println("Sorted array:", sortedArr)
 	fmt.Println("Sorting completed!")
 	fmt.Println("Goodbye!")
+
+	fmt.Println("Reversing the sorted array...")
+	reversedArr := reverse(sortedArr)
+	fmt.Println("Reversed array:", reversedArr)
+	fmt.Println("Reversing completed!")
+	fmt.Println("Goodbye again!")
 }
 
 // Bubble sort implementation in Go
@@ -27,4 +33,12 @@ func bubbleSort(arr []int) []int {
 		}
 	}
 	return arr
+}
+
+func reverse(arr []int) []int {
+	emptyArr := make([]int, len(arr))
+	for i := 0; i < len(arr); i++ {
+		emptyArr[i] = arr[len(arr)-1-i]
+	}
+	return emptyArr
 }
