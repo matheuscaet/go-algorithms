@@ -1,4 +1,4 @@
-package main
+package goalgorithms
 
 import (
 	"fmt"
@@ -9,13 +9,13 @@ func main() {
 	fmt.Println("Sorting an array using bubble sort...")
 	arr := []int{64, 34, 25, 12, 22, 11, 90}
 	fmt.Println("Original array:", arr)
-	sortedArr := bubbleSort(arr)
+	sortedArr := BubbleSort(arr)
 	fmt.Println("Sorted array:", sortedArr)
 	fmt.Println("Sorting completed!")
 	fmt.Println("Goodbye!")
 
 	fmt.Println("Reversing the sorted array...")
-	reversedArr := reverse(sortedArr)
+	reversedArr := Reverse(sortedArr)
 	fmt.Println("Reversed array:", reversedArr)
 	fmt.Println("Reversing completed!")
 	fmt.Println("Goodbye again!")
@@ -24,7 +24,7 @@ func main() {
 // Bubble sort implementation in Go
 // This function sorts an array of integers using the bubble sort algorithm.
 // It repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.
-func bubbleSort(arr []int) []int {
+func BubbleSort(arr []int) []int {
 	for i := 0; i < len(arr)-1; i++ {
 		for j := 0; j < len(arr)-i-1; j++ {
 			if arr[j] > arr[j+1] {
@@ -35,7 +35,7 @@ func bubbleSort(arr []int) []int {
 	return arr
 }
 
-func reverse(arr []int) []int {
+func Reverse(arr []int) []int {
 	emptyArr := make([]int, len(arr))
 	for i := 0; i < len(arr); i++ {
 		emptyArr[i] = arr[len(arr)-1-i]
