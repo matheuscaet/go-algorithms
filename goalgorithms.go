@@ -4,21 +4,18 @@ import (
 	"fmt"
 )
 
+var dbData = []string{"id1", "id2", "id3", "id4"}
+
 func main() {
-	fmt.Println("Hello, World!")
 	fmt.Println("Sorting an array using bubble sort...")
 	arr := []int{64, 34, 25, 12, 22, 11, 90}
 	fmt.Println("Original array:", arr)
 	sortedArr := BubbleSort(arr)
 	fmt.Println("Sorted array:", sortedArr)
-	fmt.Println("Sorting completed!")
-	fmt.Println("Goodbye!")
 
 	fmt.Println("Reversing the sorted array...")
 	reversedArr := Reverse(sortedArr)
 	fmt.Println("Reversed array:", reversedArr)
-	fmt.Println("Reversing completed!")
-	fmt.Println("Goodbye again!")
 }
 
 // Bubble sort implementation in Go
