@@ -4,8 +4,6 @@ import (
 	"fmt"
 )
 
-var dbData = []string{"id1", "id2", "id3", "id4"}
-
 func main() {
 	fmt.Println("Sorting an array using bubble sort...")
 	arr := []int{64, 34, 25, 12, 22, 11, 90}
