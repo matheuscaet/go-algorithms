@@ -27,3 +27,11 @@ func equal(a, b []int) bool {
 	}
 	return true
 }
+
+func TestKangaroo(t *testing.T) {
+	expected := "YES"
+	result := main.Kangaroo(14, 4, 98, 2)
+	if result != expected {
+		t.Errorf("Kangaroo failed: expected %v, got %v", expected, result)
+	}
+}
